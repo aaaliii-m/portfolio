@@ -18,11 +18,13 @@ function App() {
           {/* Navigation */}
           <Nav />
           {/* Hero Section */}
-          <div className='mt-4 md:mt-8 lg:mt-15'>
+          <div className='mt-4'>
             <HeroSection />
           </div>
           {/* About Section */}
+          <div className='m-4 md:mt-8'>
           <AboutSection />
+          </div>
           {/* Skills Section */}
           <SkillsSection />
           {/* Experience Section */}

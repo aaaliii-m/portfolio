@@ -70,7 +70,7 @@ const ContactSection = () => {
                     {/* Contact Form Placeholder */}
                     <div className="space-y-6">
                         <h3 className="text-lg lg:text-xl text-white font-bold">Send Message</h3>
-                        <div className="border border-gray p-6 rounded-lg">
+                        <div className="border border-gray p-6">
                             <p className="text-gray text-center text-sm">
                                 Contact form coming soon...
                             </p>

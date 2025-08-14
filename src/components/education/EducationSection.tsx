@@ -19,7 +19,7 @@ const EducationSection = () => {
 
                 {/* Education Content */}
                 <div className="max-w-2xl">
-                    <div className="border border-gray p-6 rounded-lg">
+                    <div className="border border-gray p-6">
                         <h3 className="text-lg lg:text-xl text-white font-bold mb-4">{education.degree}</h3>
                         <div className="space-y-2 text-gray text-sm">
                             <p><span className="text-primary">Institution:</span> {education.institution}</p>
