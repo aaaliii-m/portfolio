@@ -39,25 +39,25 @@ const HeroSection = () => {
         <div className="flex flex-row gap-4 justify-between">
           {/* left */}
             <div className='flex flex-col justify-center gap-1 lg:gap-2 xl:gap-4'>
-                <h1 className='xl:text-4xl lg:text-xl text-white font-bold tracking-wider'>
-                    Hi, this is Muhammad Ali and I am <span className='text-primary'>Frontend Developer</span>
+                <h1 className='xl:text-2xl lg:text-base text-white font-bold tracking-wider'>
+                    Hi, this is Muhammad Ali and I am a <span className='text-primary'>Frontend Developer</span>
                 </h1>
-            <p className='xl:text-xl text-gray mt-8 mb-4'>Bringing ideas to life using code powered by:
-            <span className={`ms-2 lg:py-1 px-4 xl:py-2 lg:text-md xl:text-2xl bg-primary text-background font-bold transition-opacity duration-500 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+            <p className='xl:text-base text-gray mt-8 mb-4'>Bringing ideas to life using code powered by:
+            <span className={`ms-2 lg:py-1 px-3 xl:py-2 lg:text-sm xl:text-base bg-primary text-background font-bold transition-opacity duration-500 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
               {talents[currentTalentIndex]}
             </span>
             </p>
-            <button className='border border-primary max-w-fit text-white px-2 xl:px-4 py-1 xl:py-2 xl:text-xl hover:bg-primary hover:text-white cursor-pointer'>Contact me!!</button>
+            <a href="#contact" className='border border-primary max-w-fit text-white px-2 xl:px-4 py-1 xl:py-2 xl:text-base hover:bg-primary hover:text-white cursor-pointer inline-block'>Contact me!!</a>
           </div>
           {/* right */}
-            <div className='w-full md:w-[50%] xl:w-[70%] border border-red-300'>
+            <div className='w-full md:w-[60%] xl:w-[75%]'>
               <div className='relative'>
-                <img src={outline} title='outline' className='w-[170px] h-auto absolute right-[60px] top-[80px] z-10' />
-                <img src={dots} title='outline' className='w-[120px] h-auto absolute left-[180px] bottom-[70px] z-50'/>
+                <img src={outline} title='outline' className='w-[140px] h-auto absolute left-[-20px] top-[20px] z-10' />
                 <img src={heroImage} title='Muhammad Ali' className='z-40 relative w-full h-auto object-cover' />
-                <div className='border border-primary px-3 py-2 flex flex-row gap-4 items-center w-[75%] absolute left-[80px]'>
+                <img src={dots} title='dots' className='w-[100px] h-auto absolute right-[20px] bottom-[-30px] z-50' />
+                <div className='px-3 py-2 flex flex-row gap-4 items-center w-full absolute bottom-[-60px]'>
                   <div className='w-[20px] h-[20px] bg-primary'></div>
-                  <p className='text-white'>Currently working on Python and AI.</p>
+                  <p className='text-white text-sm'>Currently working on Python and AI.</p>
                 </div>
               </div>
             </div>

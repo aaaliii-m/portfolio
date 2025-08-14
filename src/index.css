@@ -11,3 +11,13 @@
 * {
   font-family: "Fira Code", sans-serif;
 }
+
+/* Subtle grid background */
+.grid-background {
+  background-image: 
+    linear-gradient(rgba(171, 178, 191, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(171, 178, 191, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  background-attachment: fixed;
+}
