@@ -52,7 +52,7 @@ const ContactSection = () => {
                                         {contact.link ? (
                                             <a 
                                                 href={contact.link} 
-                                                className="text-gray hover:text-primary transition-colors duration-200 ml-2 text-sm"
+                                                className="border border-gray text-gray hover:bg-gray/20 px-2 py-1 rounded transition-all duration-200 ml-2 text-sm"
                                                 target={contact.label === 'Email' || contact.label === 'Phone' ? '_self' : '_blank'}
                                                 rel={contact.label === 'Email' || contact.label === 'Phone' ? '' : 'noopener noreferrer'}
                                             >
