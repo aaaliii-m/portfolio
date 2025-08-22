@@ -16,10 +16,12 @@ const Nav = () => {
         const handleScroll = () => {
             const sections = [
                 { id: 'top', name: 'home' },
+                { id: 'projects', name: 'projects' },
                 { id: 'about-me', name: 'about-me' },
-                { id: 'skills', name: 'skills' },
                 { id: 'experience', name: 'experience' },
+                { id: 'skills', name: 'skills' },
                 { id: 'education', name: 'education' },
+                { id: 'certifications', name: 'certifications' },
                 { id: 'contact', name: 'contact' }
             ];
 
@@ -38,6 +40,9 @@ const Nav = () => {
                 return;
             }
 
+            // Find the current section based on scroll position
+            let currentSection = 'home';
+            
             for (let i = sections.length - 1; i >= 0; i--) {
                 const section = sections[i];
                 if (section.id === 'top') continue; // Skip home section as it's handled above
@@ -48,12 +53,15 @@ const Nav = () => {
                     const elementTop = element.offsetTop;
                     const elementBottom = elementTop + element.offsetHeight;
                     
-                    if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-                        setMenuText(section.name);
+                    // More generous tolerance for better detection, especially for shorter sections
+                    if (scrollPosition >= elementTop - 100 && scrollPosition < elementBottom - 50) {
+                        currentSection = section.name;
                         break;
                     }
                 }
             }
+            
+            setMenuText(currentSection);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -91,10 +99,12 @@ const Nav = () => {
             </div>
             <ul className={`${!isOpen ? 'hidden': ''} border border-white md:border-none flex-col right-4 sm:right-7 top-12 sm:top-9 absolute md:relative md:top-auto md:right-auto md:flex-row md:flex md:gap-x-3 lg:gap-x-6 text-gray text-xs sm:text-sm`}>
                 <li className={`${menuText == 'home' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>home</li>
+                <li className={`${menuText == 'projects' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>projects</li>
                 <li className={`${menuText == 'about-me' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>about-me</li>
-                <li className={`${menuText == 'skills' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>skills</li>
                 <li className={`${menuText == 'experience' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>experience</li>
+                <li className={`${menuText == 'skills' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>skills</li>
                 <li className={`${menuText == 'education' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>education</li>
+                <li className={`${menuText == 'certifications' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>certifications</li>
                 <li className={`${menuText == 'contact' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>contact</li>
             </ul>
         </div>
