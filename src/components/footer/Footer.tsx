@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -44,7 +43,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
-                        <div className="flex items-center gap-2 mb-4">
+                        <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                                 <span className="text-white font-bold text-lg">A</span>
                             </div>
@@ -79,7 +78,7 @@ const Footer = () => {
 
                     {/* Footer Links */}
                     {footerLinks.sections.map((section, index) => (
-                        <div key={index} className="space-y-4">
+                        <div key={index} className="space-y-4 text-center">
                             <h4 className="text-white font-semibold text-sm uppercase tracking-wider">
                                 {section.title}
                             </h4>
@@ -105,7 +104,7 @@ const Footer = () => {
                 <div className="border-t border-gray/30 pt-8 mb-8"></div>
 
                 {/* Bottom Section */}
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex flex-col items-center justify-between gap-4">
                     {/* Copyright */}
                     <div className="text-gray text-sm text-center sm:text-left">
                         <p>© {currentYear} Muhammad Ali. All rights reserved.</p>

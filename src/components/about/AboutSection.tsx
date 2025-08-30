@@ -1,4 +1,5 @@
         import dots from '../../assets/Dots.png';
+import locationPin from '../../assets/location-pin.svg';
 
         const AboutSection = () => {
             return (
@@ -30,7 +31,7 @@
                                     <h3 className="text-lg lg:text-xl text-white font-bold mb-4">Location & Availability</h3>
                                     <div className="space-y-4 text-gray">
                                         <div className="flex items-center gap-2">
-                                            <span className="text-primary text-lg">📍</span>
+                                            <img src={locationPin} alt="Location Pin" className="size-5" />
                                             <span>Brooklyn, NYC (open to remote/hybrid)</span>
                                         </div>
                                         <div className="bg-primary/10 border border-primary/20 p-4 rounded">

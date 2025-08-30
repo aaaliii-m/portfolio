@@ -26,7 +26,7 @@ const CalendarIcon = () => (
 
 const EducationSection = () => {
     const education = {
-        degree: 'BS Telecommunications and Computer Networks',
+        degree: 'BS Telecommunications',
         institution: 'Superior University Lahore',
         location: 'Lahore, Pakistan',
         duration: '09/2011 - 12/2015'
@@ -44,21 +44,21 @@ const EducationSection = () => {
                             </div>
 
                 {/* Education Content */}
-                <div className="max-w-2xl">
-                    <div className="border border-gray bg-background/50 p-6">
+                <div className="lg:max-w-2xl">
+                    <div className="border border-gray bg-background/50">
                         {/* Degree Header with Icon */}
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-primary/70 text-white shadow-md">
+                        <div className="flex items-center gap-3 mb-6 p-4 md:py-6 border-b border-gray">
+                            <div className="grid size-12 place-items-center rounded-lg bg-gradient-to-br from-primary to-primary/70 text-white shadow-md">
                                 <GraduationCapIcon />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-white">{education.degree}</h3>
+                                <h3 className="text-lg font-semibold text-white">{education.degree}</h3>
                                 <p className="text-sm text-gray">Bachelor's Degree</p>
                             </div>
                         </div>
                         
                         {/* Education Details */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 p-4 md:py-6">
                             <div className="flex items-center gap-3">
                                 <div className="text-primary">
                                     <BuildingIcon />

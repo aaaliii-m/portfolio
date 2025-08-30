@@ -5,6 +5,16 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [menuText, setMenuText] = useState('home');
     const [hasBackground, setHasBackground] = useState(false);
+    const menuItems = [
+        { id: 'home', name: 'home' },
+        { id: 'projects', name: 'projects' },
+        { id: 'about-me', name: 'about-me' },
+        { id: 'experience', name: 'experience' },
+        { id: 'skills', name: 'skills' },
+        { id: 'education', name: 'education' },
+        { id: 'certifications', name: 'certifications' },
+        { id: 'contact', name: 'contact' }
+    ];
 
     // event handlers
     const handleToggle = () => {
@@ -85,27 +95,24 @@ const Nav = () => {
 
     return (
         <>
-        <div className={`flex justify-between text-white items-center text-sm sm:text-base sticky top-0 z-50 py-3 sm:py-4 px-4 sm:px-6 transition-all duration-300 ${hasBackground ? 'bg-background border-b border-gray/20' : ''}`}>
+        <div className={`mt-6 md:mb-6 xl:mb-12 flex justify-between text-white items-center text-sm sm:text-base sticky top-0 z-50 py-3 sm:py-4 transition-all duration-300 ${hasBackground ? 'bg-background border-b border-gray/20' : ''}`}>
             {/* logo */}
-            <div className='flex items-center gap-x-2 lg:gap-x-4 cursor-pointer'>
+            <div className='flex items-center gap-x-1 md:gap-x-2 2xl:gap-x-4 cursor-pointer'>
                 <img title="logo" src={logo} className='w-6 h-6 sm:w-8 sm:h-8 text-white' />
                 <p className='text-white font-bold text-sm sm:text-base'>Muhammad Ali</p>
             </div>
             {/* nav */}
-            <div className='flex flex-col gap-y-1 md:hidden cursor-pointer' onClick={handleToggle}>
+            <div className='flex flex-col gap-y-1 lg:hidden cursor-pointer' onClick={handleToggle}>
                 <div className='h-1 w-5 sm:w-6 bg-gray'></div>
                 <div className='h-1 w-5 sm:w-6 bg-gray'></div>
                 <div className='h-1 w-5 sm:w-6 bg-gray'></div>
             </div>
-            <ul className={`${!isOpen ? 'hidden': ''} border border-white md:border-none flex-col right-4 sm:right-7 top-12 sm:top-9 absolute md:relative md:top-auto md:right-auto md:flex-row md:flex md:gap-x-3 lg:gap-x-6 text-gray text-xs sm:text-sm`}>
-                <li className={`${menuText == 'home' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>home</li>
-                <li className={`${menuText == 'projects' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>projects</li>
-                <li className={`${menuText == 'about-me' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>about-me</li>
-                <li className={`${menuText == 'experience' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>experience</li>
-                <li className={`${menuText == 'skills' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>skills</li>
-                <li className={`${menuText == 'education' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>education</li>
-                <li className={`${menuText == 'certifications' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>certifications</li>
-                <li className={`${menuText == 'contact' ? 'font-bold text-white border-b-2 border-primary' : 'hover:border-b-2 hover:border-primary transition-all duration-200'} cursor-pointer px-8 md:px-[0px] py-2 md:py-[0px] my-3 md:my-[0px]`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>contact</li>
+            <ul className={`${!isOpen ? 'hidden': ''} border border-white lg:border-none flex-col right-4 sm:right-7 top-12 md:top-11 sm:top-9 absolute lg:relative lg:top-auto lg:right-auto lg:flex-row lg:flex lg:gap-x-3 text-gray text-xs sm:text-sm bg-background`}>
+
+                    {menuItems.map((item) => (
+                        <li key={item.id} className={`${item.name == menuText ? 'font-bold text-white bg-primary/20 lg:bg-transparent lg:border-b-2 lg:border-primary' : 'hover hover:bg-primary/20 lg:hover:bg-transparent hover:text-white lg:hover:border-b-2 lg:hover:border-primary transition-all duration-200'} cursor-pointer px-8 lg:px-0 py-3 lg:py-0 my-2 lg:my-0`} onClick={(e) => handleHighlight(e)}><span className='text-primary'>&#35;</span>{item.name}
+                        </li>
+                    ))}
             </ul>
         </div>
         </>
