@@ -26,8 +26,8 @@
                 title: "NYC Tour Copilot",
                 description: "Personalized travel planning app for NYC tourists with real-time recommendations, trip saving, and interactive maps.",
                 technologies: ["React", "Firebase", "Tailwind CSS", "Mapbox"],
-                liveUrl: "https://nyctourcopilot.example.com",
-                githubUrl: "https://github.com/ali-dev/nyc-tour-copilot",
+                liveUrl: "",
+                githubUrl: "",
                 image: nycTourCopilotThumb
                 },
                 {
@@ -35,8 +35,8 @@
                 title: "ParentLoop",
                 description: "School communication platform that connects teachers, parents, and administrators with announcements, attendance, and homework tracking.",
                 technologies: ["Vue.js", "Nuxt.js", "Node.js", "MongoDB"],
-                liveUrl: "https://parentloop.example.com",
-                githubUrl: "https://github.com/ali-dev/parentloop",
+                liveUrl: "",
+                githubUrl: "",
                 image: parentLoopThumb
                 },
                 {
@@ -44,8 +44,8 @@
                 title: "PetPal",
                 description: "Pet management system with profile creation, vaccination tracking, and a fun pet name generator.",
                 technologies: ["React", "Express", "MongoDB", "Tailwind CSS"],
-                liveUrl: "https://petpal.example.com",
-                githubUrl: "https://github.com/ali-dev/petpal",
+                liveUrl: "",
+                githubUrl: "",
                 image: petPalThumb
                 },
                 {
@@ -53,8 +53,8 @@
                 title: "SubwayPulse",
                 description: "Real-time subway dashboard showing train delays, line status, and commuter insights for NYC riders.",
                 technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
-                liveUrl: "https://subwaypulse.example.com",
-                githubUrl: "https://github.com/ali-dev/subwaypulse",
+                liveUrl: "",
+                githubUrl: "",
                 image: subwayPulseThumb
                 }
             ];

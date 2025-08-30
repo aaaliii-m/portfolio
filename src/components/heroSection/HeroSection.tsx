@@ -38,7 +38,7 @@
           <>
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 xl:gap-16 justify-between items-center lg:items-start">
             {/* left */}
-              <div className='flex flex-col justify-center gap-2 sm:gap-3 lg:gap-4 order-2 lg:order-1 w-full lg:w-auto text-center lg:text-left'>
+              <div className='flex flex-col justify-center gap-2 sm:gap-3 lg:gap-4 order-2 lg:order-1 w-full lg:w-auto text-center lg:text-left md:mt-8'>
                   <h1 className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-wider leading-tight'>
                       Hi, this is Muhammad Ali and I am a <span className='text-primary'>Frontend Developer</span>
                   </h1>
@@ -47,19 +47,23 @@
                 {talents[currentTalentIndex]}
               </span>
               </p>
-              <a href="#contact" className='border border-primary max-w-fit text-white mt-4 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base lg:text-lg hover:bg-primary/20 cursor-pointer inline-block transition-all duration-200'>Contact me!!</a>
+                  <div className='flex flex-row justify-center lg:justify-start'>
+                      <a href="#contact" className='border border-primary w-full md:w-fit text-white mt-4 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base lg:text-sm hover:bg-primary/20 cursor-pointer inline-block transition-all duration-200'>
+                          Contact me!!
+                      </a>
+                  </div>
             </div>
             {/* right */}
               <div className='w-full max-w-md lg:w-[47%] order-1 lg:order-2'>
                 <div className='relative'>
-                  <img src={outline} title='outline' className='w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] h-auto absolute left-[17%] top-[10px] sm:top-[15px] md:top-[20px] z-10' />
+                  <img src={outline} title='outline' className='w-15 md:w-1/4 lg:w-20 xl:w-[100px] h-auto absolute left-[15vw] md:left-[15%] lg:left-[10%] top-5 z-10' />
                   <div className='w-full h-full z-40 relative'>
                     <img src={heroImage} title='Muhammad Ali' className='w-full h-auto object-cover' />
                   </div>
-                        <img src={dots} title='dots' className='w-[50px] sm:w-[60px] lg:w-[80px] h-auto absolute right-[5px] sm:right-[20px] bottom-[20px] sm:bottom-[70px] z-50' />
-                  <div className='px-2 sm:px-3 py-1 sm:py-2 flex flex-row gap-2 sm:gap-4 items-center w-full absolute border border-gray-500 bottom-0'>
-                    <div className='w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] bg-primary'></div>
-                    <p className='text-white text-xs sm:text-sm'>Currently working on Python and AI.</p>
+                        <img src={dots} title='dots' className='w-[50px] sm:w-[60px] xl:w-[80px] h-auto absolute right-[5px] sm:right-[20px] bottom-[20px] sm:bottom-[70px] z-50' />
+                  <div className='px-2 sm:px-3 py-1 sm:py-2 flex flex-row gap-2 sm:gap-4 items-center w-full absolute border border-gray-500 hidden'>
+                    <div className='w-[15px] h-[15px] bg-primary'></div>
+                    <p className='text-white text-[0.75em] md:text-sm'>Developing expertise in Python.</p>
                   </div>
                 </div>
               </div>
