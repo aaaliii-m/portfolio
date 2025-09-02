@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import logo from '../../assets/muhammad-ali-logo.svg';
+import {Link} from "react-router";
 const Nav = () => {
     // states
     const [isOpen, setIsOpen] = useState(false);
@@ -98,8 +99,8 @@ const Nav = () => {
         <div className={`mt-6 md:mb-6 xl:mb-12 flex justify-between text-white items-center text-sm sm:text-base sticky top-0 z-50 py-3 sm:py-4 transition-all duration-300 ${hasBackground ? 'bg-background border-b border-gray/20' : ''}`}>
             {/* logo */}
             <div className='flex items-center gap-x-1 md:gap-x-2 2xl:gap-x-4 cursor-pointer'>
-                <img title="logo" src={logo} className='w-6 h-6 sm:w-8 sm:h-8 text-white' />
-                <p className='text-white font-bold text-sm sm:text-base'>Muhammad Ali</p>
+                <img title="logo" src={logo} className='w-6 h-6 sm:w-8 sm:h-8 text-white' alt="logo" />
+                <Link to='/' className='text-white font-bold text-sm sm:text-base'>Muhammad Ali</Link>
             </div>
             {/* nav */}
             <div className='flex flex-col gap-y-1 lg:hidden cursor-pointer' onClick={handleToggle}>
