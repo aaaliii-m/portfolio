@@ -200,6 +200,7 @@ const ContactSection = () => {
                                     type="text"
                                     id="name"
                                     name="name"
+                                    autoComplete="on"
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     onBlur={handleInputBlur}
@@ -225,6 +226,7 @@ const ContactSection = () => {
                                     type="email"
                                     id="email"
                                     name="email"
+                                    autoComplete="on"
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     onBlur={handleInputBlur}
